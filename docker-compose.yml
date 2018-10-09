@@ -1,0 +1,8 @@
+version: "3.4"
+  services:
+    busy:
+      build: './busyDockerfile'
+      image: '${registry_name}/sushant21/busybox:latest'
+    alp:
+      build: './alpDockerfile'
+      image: '${registry_name}/sushant21/alpine:latest'
