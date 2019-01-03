@@ -1,7 +1,13 @@
 version: "3.4"
-  services:
-    busy:
-      build: './busyDockerfile'
-      image: '${REGISTRY_NAME}/sushant21/busybox:latest'
-    alp:
-      image: '${REGISTRY_NAME}/sushant21/alpine:latest'
+services:
+  busy:
+    env_file:
+      - .env
+    build:
+      context: .
+      dockerfile: busyDockerfile
+    image: '${REGISTRY_NAME}sushant21/busybox:latest'
+  alp:
+    env_file:
+      - .env
+    image: '${REGISTRY_NAME}sushant21/alpine:latest'
