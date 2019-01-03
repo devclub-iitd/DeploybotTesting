@@ -6,7 +6,7 @@ services:
     build:
       context: .
       dockerfile: busyDockerfile
-    image: '${REGISTRY_NAME}sushant21/busybox:latest'
+    image: '${REGISTRY_NAME}sushant21/${busybox}:latest'
   alp:
     env_file:
       - .env
