@@ -4,5 +4,5 @@ services:
     env_file:
       - .env
     image: '${REGISTRY_NAME}strm/helloworld-http'
-    ports: 
-      - "8000:80"
+    expose: 
+      - "80"
