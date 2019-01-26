@@ -6,3 +6,9 @@ services:
     image: '${REGISTRY_NAME}strm/helloworld-http'
     expose: 
       - "80"
+    networks:
+      - "reverseproxy"
+networks:
+  reverseproxy:
+    external:
+      name: "reverseproxy"
