@@ -1,13 +1,6 @@
 version: "3.4"
 services:
-  busy:
+  http_server:
     env_file:
       - .env
-    build:
-      context: .
-      dockerfile: busyDockerfile
-    image: '${REGISTRY_NAME}busybox:latest'
-  alp:
-    env_file:
-      - .env
-    image: '${REGISTRY_NAME}alpine:latest'
+    image: '${REGISTRY_NAME}strm/helloworld-http'
