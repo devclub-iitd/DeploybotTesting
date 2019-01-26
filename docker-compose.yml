@@ -6,6 +6,8 @@ services:
     image: '${REGISTRY_NAME}strm/helloworld-http'
     expose: 
       - "80"
+    external_links:
+      - "serverconfig_nginx-proxy_1"
     networks:
       - "reverseproxy"
   
