@@ -5,9 +5,9 @@ services:
       - 8000:8000
     env_file:
       - .env
+    expose:
+      - "8000"
     image: '${REGISTRY_NAME}henkel/bittorrent-tracker:latest'
-    expose: 
-      - "80"
     environment:
       - VIRTUAL_HOST=${VIRTUAL_HOST}
     networks:
