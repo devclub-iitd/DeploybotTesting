@@ -17,3 +17,4 @@ networks:
   reverseproxy:
     external:
       name: "reverseproxy"
+  internal:
