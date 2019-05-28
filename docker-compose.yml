@@ -1,16 +1,18 @@
 version: "3.4"
 services:
   http_server:
+    ports:
+      - 8000:8000
     env_file:
       - .env
-    image: '${REGISTRY_NAME}strm/helloworld-http'
+    image: '${REGISTRY_NAME}henkel/bittorent-tracker:latest'
     expose: 
       - "80"
     environment:
       - VIRTUAL_HOST=${VIRTUAL_HOST}
     networks:
       - "reverseproxy"
-  
+      - "internal"
 networks:
   reverseproxy:
     external:
