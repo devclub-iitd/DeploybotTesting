@@ -7,7 +7,7 @@ services:
     env_file:
       - .env
     expose:
-      - "9438"
+      - "80"
     image: '${REGISTRY_NAME}henkel/bittorrent-tracker:latest'
     environment:
       - VIRTUAL_HOST=${VIRTUAL_HOST}
