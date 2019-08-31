@@ -3,11 +3,11 @@ version: "3.4"
 services:
   http_server:
     ports:
-      - 8000:8000
+      - 9438:9438
     env_file:
       - .env
     expose:
-      - "8000"
+      - "9438"
     image: '${REGISTRY_NAME}henkel/bittorrent-tracker:latest'
     environment:
       - VIRTUAL_HOST=${VIRTUAL_HOST}
