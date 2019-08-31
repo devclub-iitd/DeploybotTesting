@@ -2,8 +2,6 @@
 version: "3.4"
 services:
   http_server:
-    ports:
-      - 9438:9438
     env_file:
       - .env
     expose:
