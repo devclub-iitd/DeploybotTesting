@@ -2,11 +2,12 @@
 version: "3.4"
 services:
   http_server:
+    build: ./dir
     env_file:
       - .env
-    expose:
-      - "80"
-    image: '${REGISTRY_NAME}henkel/bittorrent-tracker:latest'
+    ports:
+        - 4799:80
+    image: '${REGISTRY_NAME}strm/helloworld-http:latest'
     environment:
       - VIRTUAL_HOST=${VIRTUAL_HOST}
     networks:
